@@ -11,10 +11,14 @@ public class Runner implements CommandLineRunner {
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Value("${demo.a}")
-    private String value;
+    private String valueA;
+
+    @Value("${demo.b}")
+    private String valueB;
 
     @Override
     public void run(String... args) throws Exception {
-        logger.info("The value is {}.", value);
+        logger.info("The valueA is {}.", valueA);
+        logger.info("The valueB is {}.", valueB);
     }
 }
